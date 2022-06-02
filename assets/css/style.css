@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-stretch: -100%;
+  /* Note that font-stretch is a % of normal width */
+  font-style: normal;
+  /* See note below */
+  font-weight: -900;
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-stretch: -100%;
+  /* Note that font-stretch is a % of normal width */
+  font-style: normal;
+  /* See note below */
+  font-weight: -900;
+  src: url(../fonts/WorkSans-VariableFont_wght.ttf) format("ttf");
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(-45deg, #183925 0%, #15402c 30%, #0c3d3e 46%, #0d3239 59%, #18262c 71%, #251b22 86%, #1e141a 100%);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  font-family: 'Work Sans';
+  color: #fff;
+  width: 85%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  cursor: default;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 800;
+  transition: .3s ease-in-out;
+  z-index: 100;
+}
+
+h1 p {
+  padding: 20px;
+}
+
+h1 p .green {
+  transition: .3s ease-in-out;
+}
+
+h1 p .green:hover {
+  color: #48ab34;
+  font-weight: 200;
+}
+
+h1 p .blue {
+  transition: .3s ease-in-out;
+}
+
+h1 p .blue:hover {
+  color: #3591d8;
+  font-weight: 200;
+}
+
+.logo {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  width: 7%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#progress-bar {
+  --scrollAmount: 0%;
+  background: white;
+  width: var(--scrollAmount);
+  height: 3px;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#telecinco h3 {
+  font-size: 3rem;
+}
+
+#telecinco .grid {
+  margin-left: 40px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-row-gap: 20px;
+  column-gap: 20px;
+}
+
+#telecinco .grid .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 150px;
+  height: 150px;
+  background: #3591d8;
+  padding: 20px;
+  transition: .5s;
+  text-align: center;
+}
+
+#telecinco .grid .grid-item:hover {
+  transform: scale(1.2);
+  border-radius: 100%;
+  background: #56b6ff;
+}
+
+.section-telecinco {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.section-telecinco .display {
+  background: #fff;
+  height: 80vh;
+  color: #3591d8;
+  width: 40%;
+  margin: 0 2rem;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  overflow-y: scroll;
+}
+
+.section-telecinco .display:hover {
+  border-radius: 20px;
+}
+
+.section-telecinco .display div {
+  width: 100%;
+  height: 100%;
+}
+
+.section-telecinco .display div div {
+  margin-bottom: 20px;
+}
+
+.section-telecinco .display p {
+  padding-bottom: 20px;
+  color: #000;
+}
+
+.section-telecinco .display h4 {
+  font-size: 2rem;
+}
+
+.section-telecinco .display img {
+  object-fit: cover;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.block, .inactive {
+  display: none;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 3%;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #fff;
+  padding: 20px;
+  border-radius: 100%;
+  transition: .5s ease-in-out;
+  z-index: 100;
+}
+
+.arrow:hover {
+  background-color: #ffffff75;
+  cursor: pointer;
+}
+
+.arrow svg {
+  fill: #fff;
+  pointer-events: none;
+}
+
+#left {
+  left: 5vw;
+}
+
+#right {
+  left: 90vw;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+}
+
+.container section {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.container section h2 {
+  font-size: 48px;
+}
+
+.container section .text {
+  width: 80%;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+.container section .text h3 {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+.container section .text .telecinco {
+  color: #3591d8;
+}
+
+.container section .text .ondacero {
+  color: #48ab34;
+}
+/*# sourceMappingURL=style.css.map */
