@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=WorkSans:wght@100;800;900&display=swap");
 *, *:before, *:after {
   padding: 0;
   margin: 0;
@@ -13,16 +13,6 @@
   /* See note below */
   font-weight: -900;
   src: url(../fonts/Montserrat-VariableFont_wght.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-stretch: -100%;
-  /* Note that font-stretch is a % of normal width */
-  font-style: normal;
-  /* See note below */
-  font-weight: -900;
-  src: url(../fonts/WorkSans-VariableFont_wght.ttf) format("ttf");
 }
 
 ::-webkit-scrollbar {
@@ -74,20 +64,22 @@ h1 p {
   padding: 20px;
 }
 
-h1 p .green {
+.green {
   transition: .3s ease-in-out;
+  cursor: default;
 }
 
-h1 p .green:hover {
+.green:hover {
   color: #48ab34;
   font-weight: 200;
 }
 
-h1 p .blue {
+.blue {
   transition: .3s ease-in-out;
+  cursor: default;
 }
 
-h1 p .blue:hover {
+.blue:hover {
   color: #3591d8;
   font-weight: 200;
 }
