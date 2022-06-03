@@ -54,7 +54,7 @@ h1 {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 54px;
   font-weight: 800;
   transition: .3s ease-in-out;
   z-index: 100;
@@ -373,5 +373,38 @@ a {
 
 .container .first {
   padding: 80px;
+}
+
+@media screen and (max-width: 800px) {
+  .container .first {
+    padding: 20px;
+  }
+  .container .first h1 {
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .container .section {
+    padding: 40px;
+  }
+  .container .section h2 {
+    font-size: 3rem;
+  }
+  .container .section .text p {
+    font-size: 11px;
+  }
+  .container .section .text h3 {
+    margin: 10px 0;
+  }
+  .arrow {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+  #telecinco h3 {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
